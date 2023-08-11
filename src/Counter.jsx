@@ -1,14 +1,14 @@
 import React from "react";
 
-function Counter({ title, count }) {
-  //props can also be declared like this
+function Counter({ title, ...obj }) {
+  //props can also be declared like this, this way is rest method
   return (
     <div>
       <h1>
         {title}
-        {count}
+        {obj.count}
       </h1>
-      {/*the count should be displayed here as props*/}
+      {/*the count should be displayed here as props, rest props*/}
     </div>
   );
 }

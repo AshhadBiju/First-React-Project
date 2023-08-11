@@ -9,6 +9,8 @@ function App() {
   let obj = {
     title: "1st Counter", // also another way of adding props but the name here is spread operator.
     count: count,
+
+    place: "hellop",
   };
   return (
     <div className="App">
