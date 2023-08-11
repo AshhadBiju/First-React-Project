@@ -15,9 +15,9 @@ function App() {
   return (
     <div className="App">
       <button onClick={addCount}>Add</button> {/*calling said function*/}
-      {emp.map((obj) => {
+      {emp.map((obj, index) => {
         //then we call the let emp with map and store them in a variable obj in a function
-        return <Employee name={obj.name} age={obj.age} />; //then we call the function Employee.jsx
+        return <Employee key={index} name={obj.name} age={obj.age} />; //then we call the function Employee.jsx
       })}
     </div>
   );
