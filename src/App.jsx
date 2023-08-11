@@ -15,10 +15,12 @@ function App() {
   return (
     <div className="App">
       <button onClick={addCount}>Add</button> {/*calling said function*/}
-      {emp.map((obj, index) => {
-        //then we call the let emp with map and store them in a variable obj in a function
-        return <Employee key={index} name={obj.name} age={obj.age} />; //then we call the function Employee.jsx
-      })}
+      {emp.map((obj, index) => (
+        <Employee key={index} {...obj} />
+      ))}
+      {/*then we call the let emp with map and store them in a variable obj in a function*/}
+      {/*then we call the function from Employee.jsx. Here name and age is under obj so {...obj} can also be used.*/}
+      {/*no return is used*/}
     </div>
   );
 }
