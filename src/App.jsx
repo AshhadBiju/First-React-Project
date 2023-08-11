@@ -1,13 +1,16 @@
-import "./App.css";
-import Header from "./components/Header"; // This is how you import a .js file.
+import { useState } from "react"; //importing useState
 function App() {
-  const anydata = " --> any and every data can be displayed here"; // This is to declare a variable in const
+  const [count, setCount] = useState(0); // declaring useState
+  const addCount = () => {
+    // this is how you declare an arrow function, a shorter version of a function.
+    setCount(count + 1);
+    console.log(count);
+  };
+
   return (
-    <div>
-      <Header anydata={anydata} />
-      {/*The is how you call said function, can aslo be called multiple times, const data is also called here*/}
-      <p>This is the data in the variable {anydata}</p>
-      {/* This is how you call the variable in const*/}
+    <div className="App">
+      <button onClick={addCount}>Add</button> {/*calling said function*/}
+      <h1>Counter: {count}</h1>
     </div>
   );
 }
