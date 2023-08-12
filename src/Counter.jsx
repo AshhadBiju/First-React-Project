@@ -1,15 +1,10 @@
 import React from "react";
 
-function Counter({ title, ...obj }) {
-  //props can also be declared like this, this way is rest method
+function Counter() {
   return (
     <div>
-      <h1>
-        {title}
-        {obj.count}
-      </h1>
-      {/*the count should be displayed here as props, rest props*/}
-    </div>
+      <h1>Hello I am Component</h1>
+    </div> //this component will work if true
   );
 }
 
