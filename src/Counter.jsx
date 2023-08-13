@@ -1,10 +1,13 @@
+import { useState } from "react";
 import React from "react";
 
 function Counter() {
+  const [count, setCount] = useState(0);
   return (
     <div>
-      <h1>Hello I am Component</h1>
-    </div> //this component will work if true
+      <button onClick={() => setCount(count + 1)}>Increment</button>
+      <h1>Show the count:{count}</h1>
+    </div> //This is called updating the value
   );
 }
 
