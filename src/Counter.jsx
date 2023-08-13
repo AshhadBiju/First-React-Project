@@ -9,6 +9,7 @@ function Counter() {
       console.log("Un-mounting...");
     };
   });
+
   const [count, setCount] = useState(0);
   return (
     <div>
