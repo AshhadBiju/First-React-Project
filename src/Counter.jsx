@@ -3,6 +3,7 @@ import React from "react";
 
 function Counter() {
   useEffect(() => {
+    //this is how to implement useEffect. Mainly to show the state or effect of the component when it mounts, un-mounts or updates
     console.log("Mounting...");
     return () => {
       console.log("Un-mounting...");
