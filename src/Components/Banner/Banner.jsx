@@ -11,9 +11,9 @@ function Banner() {
         </div>
         <h1 className="description">
           Enthekilum okke ang ittekk deyy, ith Netflix alle, veronnum allallo
-          ghfgfghfghfghfghfghgfhfghfghfghfghfghfghfgh
         </h1>
       </div>
+      <div className="fade_bottom"></div>
     </div>
   );
 }
