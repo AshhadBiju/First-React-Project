@@ -1,16 +1,17 @@
 import React from "react";
-import axios from "axios"; //this is needed as to import axios library
 import "./App.css";
-import { useState } from "react"; //need useState to display the data
 import NavBar from "./Components/NavBar/NavBar";
 import Banner from "./Components/Banner/Banner";
 import RawPost from "./Components/RawPost/RawPost";
+import { action, originals, trending } from "./urls";
 function App() {
   return (
-    <div>
+    <div className="App">
       <NavBar />
       <Banner />
-      <RawPost />
+      <RawPost urls={originals} title="Netflix Originals" />
+      <RawPost urls={action} title="Action" isSmall />
+      <RawPost urls={trending} title="Trending" isSmall />
     </div>
   );
 }
